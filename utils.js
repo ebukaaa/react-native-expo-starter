@@ -1,6 +1,4 @@
-import { NavigationContainer } from "@react-navigation/native";
-import React from "react";
-import { useStatusBar as StatusBar } from "tools/status-bar";
-import { useNavigator as Navigator } from "./screens";
-
-export { React, StatusBar, NavigationContainer, Navigator };
+export { NavigationContainer } from "@react-navigation/native";
+export { useStatusBar as StatusBar } from "tools/status-bar";
+export { useNavigator as Navigator } from "./screens";
+export { default as React } from "react";

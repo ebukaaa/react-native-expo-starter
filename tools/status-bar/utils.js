@@ -1,5 +1,4 @@
-import { StatusBar } from "expo-status-bar";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { unmount } from "tools";
 
 let initStyle;
@@ -13,6 +12,9 @@ function updateStyle({ style, setStyle }) {
     putStyle = setStyle;
   }
 }
+
+export { default as React } from "react";
+export { StatusBar } from "expo-status-bar";
 
 export function useStore() {
   const [style, setStyle] = useState("auto");
@@ -28,5 +30,3 @@ export function useProps() {
     putStyle,
   };
 }
-
-export { React, StatusBar };
