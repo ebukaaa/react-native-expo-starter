@@ -2,7 +2,7 @@ export default {
   name: "react-native-expo-starter",
   description: "A starter project for React Native using Expo CLI",
   slug: "react-native-expo-starter",
-  version: "2.0.0",
+  version: "2.1.0",
   orientation: "portrait",
   icon: "./assets/icon.png",
   splash: {
