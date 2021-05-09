@@ -1,28 +1,21 @@
-import { useEffect, useState } from "react";
-import { unmount } from "tools";
+import { useEffect, useState, useMemo } from "react";
+import { StatusBar } from "expo-status-bar";
 
 let initStyle;
 let putStyle;
 
-function updateStyle({ style, setStyle }) {
-  if (initStyle !== style) {
-    initStyle = style;
-  }
-  if (setStyle && putStyle !== setStyle) {
-    putStyle = setStyle;
-  }
-}
-
-export { default as React } from "react";
-export { StatusBar } from "expo-status-bar";
-
 export function useStore() {
   const [style, setStyle] = useState("auto");
-  updateStyle({ style, setStyle });
-  useEffect(() => unmount({ set: setStyle }), []);
-  useEffect(() => updateStyle({ style }), [style]);
+  useMemo(() => {
+    if (putStyle !== setStyle) {
+      putStyle = setStyle;
+    }
+    initStyle = style;
+  }, [style]);
 
-  return { style };
+  useEffect(() => () => setStyle("auto"), []);
+
+  return { style, StatusBar };
 }
 export function useProps() {
   return {

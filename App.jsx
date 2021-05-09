@@ -1,5 +1,5 @@
 import "react-native-gesture-handler";
-import { React, StatusBar, NavigationContainer, Navigator } from "./utils";
+import { StatusBar, NavigationContainer, Navigator } from "./utils";
 
 export default function App() {
   return (

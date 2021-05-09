@@ -75,12 +75,12 @@
     //     "html": true
     //   }
     // ],
-    // "react/jsx-props-no-spreading": [
-    //   "error",
-    //   {
-    //     "exceptions": ["Component"]
-    //   }
-    // ],
+    "react/jsx-props-no-spreading": [
+      "error",
+      {
+        "exceptions": ["Path"]
+      }
+    ],
     // "react/style-prop-object": ["error",
     //   {
     //     "allow": ["App"]

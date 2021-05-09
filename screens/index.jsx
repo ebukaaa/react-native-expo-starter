@@ -1,4 +1,4 @@
-import { React, Navigator, Screen, useHome } from "./utils";
+import { Navigator, Screen, useHome } from "./utils";
 
 export function useNavigator() {
   return (
