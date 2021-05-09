@@ -1,7 +1,8 @@
-import { React, StatusBar, useStore } from "./utils";
+import { useStore } from "./utils";
 
 export function useStatusBar() {
-  const { style } = useStore();
+  const { style, StatusBar } = useStore();
 
   return <StatusBar style={style} />;
 }
+export default useStatusBar;

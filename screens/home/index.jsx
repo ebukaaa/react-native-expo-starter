@@ -1,4 +1,4 @@
-import { appStyles, React, View, Text } from "./utils";
+import { appStyles, View, Text } from "./utils";
 
 export function useHome() {
   return (
