@@ -1,9 +1,15 @@
-import { appStyles, View, Text } from "./utils";
+import { useStore } from "./utils";
 
-export function useT() {
+export function useM() {
+  const {
+    styles: { appStyles },
+    View,
+    Text,
+  } = useStore();
+
   return (
     <View style={appStyles}>
-      <Text>New components</Text>
+      <Text>New mock</Text>
     </View>
   );
 }
