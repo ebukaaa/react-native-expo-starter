@@ -6,12 +6,14 @@
     "audit": "npm audit fix",
     "eject": "expo eject",
     "ios": "expo start --ios",
+    "npm-install": "npm i",
     "publish": "expo publish",
     "reset-cache": "react-native start --reset-cache",
     "set": "expo install",
     "start": "expo start",
     "test": "jest",
     "update": "expo update",
+    "upgrade": "sudo npm i -g expo-cli",
     "web": "expo start --web"
   },
   "dependencies": {
@@ -26,7 +28,7 @@
     "react-native-gesture-handler": "~1.10.2",
     "react-native-reanimated": "~2.1.0",
     "react-native-screens": "~3.0.0",
-    "react-native-web": "~0.13.12",
+    "react-native-web": "^0.16.3",
     "react-navigation": "^4.4.4"
   },
   "devDependencies": {
