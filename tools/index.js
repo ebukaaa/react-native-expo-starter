@@ -1,11 +1,10 @@
 import { lazy, Suspense } from "react";
-import { Text } from "react-native";
 
 function load(importPath, props) {
   const Path = lazy(() => importPath);
 
   return (
-    <Suspense fallback={<Text>Loading...</Text>}>
+    <Suspense fallback={null}>
       <Path {...props} />
     </Suspense>
   );

@@ -1,12 +1,11 @@
 import "react-native-gesture-handler";
-import { StatusBar, NavigationContainer, Navigator } from "./utils";
+import { StatusBar, NavigationContainer, Screens } from "./utils";
 
 export default function App() {
   return (
     <NavigationContainer>
       <StatusBar />
-
-      <Navigator />
+      <Screens />
     </NavigationContainer>
   );
 }
