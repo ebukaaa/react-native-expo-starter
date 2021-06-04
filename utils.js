@@ -1,3 +1,3 @@
 export { NavigationContainer } from "@react-navigation/native";
 export { useStatusBar as StatusBar } from "tools";
-export { useNavigator as Navigator } from "./screens";
+export { useScreens as Screens } from "./screens/index.routes";

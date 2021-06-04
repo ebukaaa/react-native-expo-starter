@@ -1,6 +1,6 @@
 import { Navigator, Screen, useHome } from "./utils";
 
-export function useNavigator() {
+export function useScreens() {
   return (
     <Navigator>
       <Screen name="Home" component={useHome} />
