@@ -41,20 +41,22 @@
         "objects": "always-multiline"
       }
     ],
-    "linebreak-style": ["error", "unix"],
-    "import/prefer-default-export": "off",
     "import/no-cycle": "off",
     "import/no-extraneous-dependencies": "off",
-    "no-alert": "off",
-    "prettier/prettier": "warn",
-    "quotes": ["error", "double"],
+    "import/prefer-default-export": "off",
+    "import/no-unresolved": [2, { "ignore": ["tools"] }],
     "jest/no-disabled-tests": "warn",
     "jest/no-focused-tests": "error",
     "jest/no-identical-title": "error",
     "jest/prefer-to-have-length": "warn",
     "jest/valid-expect": "error",
+    "linebreak-style": ["error", "unix"],
+    "no-alert": "off",
+    "no-return-assign": [ 2, "except-parens" ],
     "no-unused-vars": "warn",
-    "import/no-unresolved": [2, { "ignore": ["tools"] }],
+    "prettier/prettier": "warn",
+    "quotes": ["error", "double"],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/jsx-no-bind": [
       "error",
       {
@@ -66,7 +68,12 @@
       }
     ],
     "react/jsx-no-undef": "error",
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-props-no-spreading": [
+      "error",
+      {
+        "exceptions": ["Path"]
+      }
+    ],
     "react/react-in-jsx-scope": "off",
     // "react/self-closing-comp": [
     //   "error",
@@ -75,20 +82,14 @@
     //     "html": true
     //   }
     // ],
-    "react/jsx-props-no-spreading": [
-      "error",
-      {
-        "exceptions": ["Path"]
-      }
-    ],
     // "react/style-prop-object": ["error",
     //   {
     //     "allow": ["App"]
     //   }
     // ],
+    "react-native/no-inline-styles": 2,
     "react-native/no-unused-styles": 2,
     "react-native/split-platform-components": 2,
-    "react-native/no-inline-styles": 2,
     // "react-native/no-color-literals": 2,
     // "react-native/no-raw-text": [
     //   2,
