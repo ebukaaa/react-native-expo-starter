@@ -1,13 +1,14 @@
 {
-  "env": {
-    "browser": true,
-    "es6": true,
-    "node": true,
-    "react-native/react-native": true
-  },
+  // "env": {
+  //   "browser": true,
+  //   "es6": true,
+  //   "node": true,
+  //   "react-native/react-native": true
+  // },
   "parser": "@babel/eslint-parser",
   "extends": [
     "airbnb",
+    "airbnb/hooks",
     "eslint:recommended",
     "plugin:react/recommended",
     // "plugin:jest/recommended",
@@ -15,8 +16,8 @@
     "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:jsx-a11y/recommended",
-    "plugin:react-hooks/recommended",
-    "prettier"
+    "prettier",
+    "plugin:prettier/recommended"
   ],
   "globals": {
     "Atomics": "readonly",
@@ -29,7 +30,7 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": ["react", "react-native", "prettier", "jest"],
+  "plugins": ["react", "react-native", "prettier"],
   "rules": {
     "comma-dangle": [
       "error",
@@ -45,16 +46,25 @@
     "import/no-extraneous-dependencies": "off",
     "import/prefer-default-export": "off",
     "import/no-unresolved": [2, { "ignore": ["tools"] }],
-    "jest/no-disabled-tests": "warn",
-    "jest/no-focused-tests": "error",
-    "jest/no-identical-title": "error",
-    "jest/prefer-to-have-length": "warn",
-    "jest/valid-expect": "error",
+    // "jest/no-disabled-tests": "warn",
+    // "jest/no-focused-tests": "error",
+    // "jest/no-identical-title": "error",
+    // "jest/prefer-to-have-length": "warn",
+    // "jest/valid-expect": "error",
     "linebreak-style": ["error", "unix"],
     "no-alert": "off",
-    "no-return-assign": [ 2, "except-parens" ],
+    "no-return-assign": [2, "except-parens"],
     "no-unused-vars": "warn",
     "prettier/prettier": "warn",
+    //  "prettier/prettier": [
+    //   "warn",
+    //   {
+    //     "singleQuote": true,
+    //     "trailingComma": "all",
+    //     "arrowParens": "avoid",
+    //     "endOfLine": "auto"
+    //   }
+    // ],
     "quotes": ["error", "double"],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/jsx-no-bind": [
@@ -74,6 +84,7 @@
         "exceptions": ["Path"]
       }
     ],
+    "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
     // "react/self-closing-comp": [
     //   "error",
