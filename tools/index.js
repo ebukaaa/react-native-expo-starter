@@ -1,6 +1,6 @@
 import { lazy, Suspense } from "react";
 
-function load(importPath, props) {
+export default function load(importPath, props) {
   const Path = lazy(() => importPath);
 
   return (
@@ -10,4 +10,4 @@ function load(importPath, props) {
   );
 }
 
-export const useStatusBar = () => load(import("./status-bar"));
+// export const useStatusBar = () => load(import("./status-bar"));
