@@ -45,7 +45,7 @@
     "import/no-cycle": "off",
     "import/no-extraneous-dependencies": "off",
     "import/prefer-default-export": "off",
-    "import/no-unresolved": [2, { "ignore": ["tools"] }],
+    "import/no-unresolved": [2, { "ignore": ["components"] }],
     // "jest/no-disabled-tests": "warn",
     // "jest/no-focused-tests": "error",
     // "jest/no-identical-title": "error",

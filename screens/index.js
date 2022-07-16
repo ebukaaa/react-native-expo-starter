@@ -1,13 +1,12 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { useMemo } from "react";
-import { useHome } from "./home";
+import Home from "./home";
 
-export function useScreens() {
-  const { Navigator, Screen } = useMemo(() => createNativeStackNavigator(), []);
+const { Navigator, Screen } = createNativeStackNavigator();
 
+export default function useScreens() {
   return (
     <Navigator>
-      <Screen name="Home" component={useHome} />
+      <Screen component={Home} name="Home" />
     </Navigator>
   );
 }
