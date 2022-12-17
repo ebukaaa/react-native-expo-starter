@@ -1,0 +1,65 @@
+{
+  "cacheDirectory": "<rootDir>/tests/.cache",
+  "clearMocks": true,
+  "collectCoverage": true,
+  "collectCoverageFrom": [
+    "**/*.{ts,tsx}",
+    "!**/*.d.ts",
+    "!**/babel.config.js",
+    "!**/dist/**",
+    "!**/metro.config.js",
+    "!**/mocks.ts",
+    "!**/node_modules/**",
+    "!**/tests/**"
+  ],
+  "coverageDirectory": "<rootDir>/tests/coverage",
+  "coverageReporters": ["json", "text", "lcov", "clover"],
+  "coverageThreshold": {
+    "global": {
+      "statements": 100,
+      "branches": 100,
+      "functions": 100,
+      "lines": 100
+    }
+  },
+
+  "errorOnDeprecated": true,
+
+  "moduleDirectories": ["node_modules", "<rootDir>"],
+  "moduleNameMapper": {
+    "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/mocks.ts",
+    "\\.(css|less|scss)$": "<rootDir>/mocks.ts"
+  },
+
+  "notify": true,
+  "notifyMode": "always",
+
+  "preset": "jest-expo",
+
+  "resetMocks": true,
+  "restoreMocks": true,
+  "roots": ["<rootDir>"],
+
+  "setupFilesAfterEnv": ["@testing-library/jest-native/extend-expect"],
+  "setupFiles": ["<rootDir>/jest.setup.ts"],
+
+  "testLocationInResults": true,
+  "testMatch": [
+    "**/__tests__/**/*.[jt]s?(x)",
+    "**/?(*.)+(spec|test).[tj]s?(x)"
+  ],
+  "testPathIgnorePatterns": [
+    "<rootDir>/babel.config.js",
+    "<rootDir>/dist",
+    "<rootDir>/metro.config.js",
+    "<rootDir>/mocks.ts",
+    "<rootDir>/node_modules",
+    "<rootDir>/tests"
+  ],
+  "transform": {},
+  "transformIgnorePatterns": [
+    "node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|react-native-svg)"
+  ],
+
+  "verbose": true
+}
