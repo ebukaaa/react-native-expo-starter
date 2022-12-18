@@ -1,7 +1,4 @@
 {
   "ref": true,
-  "dimensions": false,
-  "svgProps": {
-    "preserveAspectRatio": "none"
-  }
+  "dimensions": false
 }
