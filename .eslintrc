@@ -43,6 +43,29 @@
   ],
   "root": true,
   "rules": {
+    "@typescript-eslint/no-empty-interface": [
+      "error",
+      { "allowSingleExtends": true }
+    ],
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/padding-line-between-statements": [
+      "error",
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": ["export", "interface", "type"]
+      }
+    ],
+    "import/extensions": [
+      "error",
+      {
+        "json": "ignorePackages",
+        "svg": "ignorePackages",
+        "scss": "ignorePackages",
+        "ts": "ignorePackages"
+      }
+    ],
     "import/no-anonymous-default-export": [
       "error",
       {
@@ -53,20 +76,6 @@
         "allowCallExpression": true,
         "allowLiteral": false,
         "allowObject": false
-      }
-    ],
-    "@typescript-eslint/no-empty-interface": [
-      "error",
-      { "allowSingleExtends": true }
-    ],
-    "@typescript-eslint/no-unused-vars": "warn",
-    "@typescript-eslint/no-var-requires": "off",
-    "import/extensions": [
-      "error",
-      {
-        "json": "ignorePackages",
-        "scss": "ignorePackages",
-        "ts": "ignorePackages"
       }
     ],
     "import/no-cycle": "off",
