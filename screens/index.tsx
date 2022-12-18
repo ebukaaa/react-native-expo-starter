@@ -1,4 +1,4 @@
-import Home from "./home";
+import { Home } from "components";
 import { Navigator, Screen } from "./utils";
 
 export default function useScreens() {
