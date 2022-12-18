@@ -3,7 +3,7 @@ import type { ReactTestRendererJSON } from "react-test-renderer";
 import App from "App";
 
 describe("App", () => {
-  it("should render", () => {
+  it("should have a child", () => {
     expect(
       (render(<App />).toJSON() as ReactTestRendererJSON).children
     ).toHaveLength(1);
