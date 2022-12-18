@@ -22,6 +22,7 @@
     "removeComments": true,
     "strict": true
   },
+  "exclude": ["utils"],
   "extends": "expo/tsconfig.base",
   "include": ["**/*.ts", "**/*.tsx"]
 }
