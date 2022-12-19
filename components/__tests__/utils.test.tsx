@@ -1,13 +1,4 @@
-import { render } from "@testing-library/react-native";
-import load, { defineProperties, throwError } from "components/utils";
-
-describe("load", () => {
-  it("should load a component", () => {
-    const Icon = () => load(import("public/vercel.svg"));
-    const screen = render(<Icon />);
-    expect(screen.container).toBeTruthy();
-  });
-});
+import { defineProperties, throwError } from "components/utils";
 
 describe("defineProperties", () => {
   it("should amend a current property in an object", () => {
