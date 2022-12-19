@@ -1,5 +1,10 @@
 import { lazy, Suspense } from "react";
-import type { ImportedComponent, Properties } from "./types";
+import type {
+  Action,
+  ComponentType,
+  ImportedComponent,
+  Properties,
+} from "./types";
 
 export default function load<Props extends object>(
   importedComponent: Promise<ImportedComponent<Props>>,
@@ -19,4 +24,18 @@ export function defineProperties<Component extends object>(
   properties: Properties<Component>
 ) {
   Object.defineProperties(component, properties);
+}
+
+export function throwError<Component extends ComponentType>(
+  component: Component,
+  action: Action,
+  property: keyof Component
+) {
+  return function error() {
+    throw new Error(
+      `${component.name.substring(
+        3
+      )} should be rendered to ${action} '${property.toString()}' property`
+    );
+  };
 }
