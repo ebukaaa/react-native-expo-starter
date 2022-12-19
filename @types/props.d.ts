@@ -5,6 +5,8 @@ export interface Props {
 
 declare module "react-native" {
   interface ViewProps extends Props {}
+
   interface TextProps extends Props {}
+
   interface ScrollViewProps extends Props {}
 }
