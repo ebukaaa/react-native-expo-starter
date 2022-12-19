@@ -1,7 +1,7 @@
 import { defineProperties, throwError } from "components/utils";
 
 describe("defineProperties", () => {
-  it("should amend a current property in an object", () => {
+  it("should amend current property in an object", () => {
     const person = { name: "John", age: 1 };
 
     defineProperties(person, { name: { value: "Doe", writable: false } });
