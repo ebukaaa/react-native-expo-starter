@@ -19,7 +19,8 @@
     "react-native-screens": "~3.18.2",
     "react-native-svg": "13.4.0",
     "react-native-web": "~0.18.10"
-  },
+  },  
+  "description": "A starter project for React Native using Expo CLI",
   "devDependencies": {
     "@babel/core": "^7.20.5",
     "@testing-library/jest-native": "^5.3.3",
@@ -73,6 +74,8 @@
     "url": "https://github.com/pascinso/expo-starter.git"
   },
   "scripts": {
+    ":clean:npm": "npm cache clean --force",
+    ":update:dependency": "npx npm-check-updates -u",
     "eslint": "eslint --ext .ts,.tsx .",
     "eslint:fix": "eslint --fix --ext .ts,.tsx .",
     "expo:android": "expo start --clear --android",
@@ -86,14 +89,11 @@
     "expo:upgrade": "sudo npm i -g expo-cli",
     "expo:web": "expo start --clear --web",
     "npm:audit": "npm audit fix",
-    "npm:check-updates": "npx npm-check-updates -u",
-    "npm:clean-cache": "npm cache clean --force",
     "npm:install": "npm i --legacy-peer-deps",
-    "remove:node-modules": "rm -rf node_modules",
-    "remove:package-lock": "rm -f package-lock.json",
-    "reset:npm": "npm run remove:node-modules && npm run remove:package-lock && npm run npm:clean-cache",
-    "reset:react-native": "react-native start --reset-cache",
+    "post:clean:npm": "npm run npm:install",
+    "pre:clean:npm": "rm -f package-lock.json && rm -rf node_modules",
+    "reset:react:native": "react-native start --reset-cache",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest"
   },
-  "version": "4.1.1"
+  "version": "1.0.0"
 }
