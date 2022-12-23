@@ -19,7 +19,7 @@
     "react-native-screens": "~3.18.2",
     "react-native-svg": "13.4.0",
     "react-native-web": "~0.18.10"
-  },  
+  },
   "description": "A starter project for React Native using Expo CLI",
   "devDependencies": {
     "@babel/core": "^7.20.5",
