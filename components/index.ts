@@ -1,4 +1,4 @@
-import type { StackScreenProps } from "./types";
+import type { StackScreenProps } from "./@types";
 import load from "./utils";
 
 export const Home = (props: StackScreenProps) =>

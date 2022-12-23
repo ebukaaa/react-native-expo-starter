@@ -4,7 +4,7 @@ import type {
   ComponentType,
   ImportedComponent,
   Properties,
-} from "./types";
+} from "./@types";
 
 export default function load<Props extends object>(
   importedComponent: Promise<ImportedComponent<Props>>,
