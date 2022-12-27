@@ -4,16 +4,12 @@ import Google from "assets/google.svg";
 import Home from "..";
 
 describe("useHome", () => {
-  let app: ReactTestRendererJSON;
-
-  beforeEach(() => {
-    app = render(<Home />).toJSON() as ReactTestRendererJSON;
-  });
-
   it("should render", () => {
-    expect(app.children).toBeTruthy();
+    const { children } = render(<Home />).toJSON() as ReactTestRendererJSON;
+    expect(children).toBeTruthy();
   });
   it("should call Google icon", () => {
+    render(<Home />);
     expect(Google).toHaveBeenCalled();
   });
 });
