@@ -6,8 +6,7 @@ jest.mock("components");
 
 describe("App", () => {
   it("should have a child", () => {
-    expect(
-      (render(<App />).toJSON() as ReactTestRendererJSON).children
-    ).toHaveLength(1);
+    const { children } = render(<App />).toJSON() as ReactTestRendererJSON;
+    expect(children).toHaveLength(1);
   });
 });
