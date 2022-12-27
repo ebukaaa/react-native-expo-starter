@@ -3,6 +3,7 @@
     "browser": true,
     "commonjs": true,
     "es6": true,
+    "jest": true,
     "node": true,
     "react-native/react-native": true
   },
@@ -23,6 +24,7 @@
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "plugin:react-native/all",
+    "plugin:testing-library/react",
     "prettier"
   ],
   "globals": { "JSX": true, "React": "writable" },
@@ -39,7 +41,8 @@
     "jest",
     "prettier",
     "react",
-    "react-native"
+    "react-native",
+    "testing-library"
   ],
   "root": true,
   "rules": {
