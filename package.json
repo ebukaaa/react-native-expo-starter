@@ -90,7 +90,7 @@
     "expo:upgrade": "sudo npm i -g expo-cli",
     "expo:web": "expo start --clear --web",
     "npm:audit": "npm audit fix",
-    "npm:install": "npm i --legacy-peer-deps",
+    "npm:install": "npm i",
     "postclean:npm:cache": "npm run npm:install",
     "postupdate:dependency": "npm run npm:install",
     "preclean:npm:cache": "rm -f package-lock.json && rm -rf node_modules",
