@@ -1,6 +1,6 @@
 export interface Props {
-  styleName?: string;
-  className?: string;
+  styleName?: string | undefined;
+  className?: { [property: string]: string };
 }
 
 declare module "react-native" {
@@ -9,4 +9,8 @@ declare module "react-native" {
   interface TextProps extends Props {}
 
   interface ScrollViewProps extends Props {}
+
+  interface ImageBackgroundProps extends Props {}
+
+  interface TouchableOpacityProps extends Props {}
 }
