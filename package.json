@@ -27,7 +27,8 @@
     "react-native-safe-area-context": "4.6.3",
     "react-native-screens": "~3.22.0",
     "react-native-svg": "13.9.0",
-    "react-native-web": "~0.19.9"
+    "react-native-web": "~0.19.9",
+    "save-dev": "^0.0.1-security"
   },
   "description": "A starter project for React Native using Expo CLI",
   "devDependencies": {
@@ -38,6 +39,7 @@
     "@types/node": "^20.8.4",
     "@types/react": "~18.2.27",
     "@types/react-dom": "~18.0.10",
+    "@types/react-native": "^0.72.3",
     "@types/react-test-renderer": "^18.0.3",
     "@typescript-eslint/eslint-plugin": "^6.7.5",
     "@typescript-eslint/parser": "^6.7.5",
