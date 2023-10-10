@@ -60,13 +60,15 @@
         "next": ["export", "interface", "type"]
       }
     ],
+    "global-require": "off",
     "import/extensions": [
       "error",
       {
         "json": "ignorePackages",
         "svg": "ignorePackages",
         "scss": "ignorePackages",
-        "ts": "ignorePackages"
+        "ts": "ignorePackages",
+        "ttf": "ignorePackages"
       }
     ],
     "import/no-anonymous-default-export": [
@@ -81,16 +83,19 @@
         "allowObject": false
       }
     ],
-    "import/no-cycle": "off",
+    "import/no-cycle": [2, { "ignoreExternal": true }],
     "import/no-extraneous-dependencies": [
       "error",
       {
         "devDependencies": true,
         "optionalDependencies": true,
-        "peerDependencies": true
+        "peerDependencies": true,
+        "includeInternal": true,
+        "includeTypes": true
       }
     ],
     "import/no-unresolved": [2, { "ignore": ["."] }],
+    // "import/prefer-default-export": ["off"],
     "jest/no-disabled-tests": "warn",
     "jest/no-focused-tests": "error",
     "jest/no-identical-title": "error",
@@ -106,10 +111,18 @@
       }
     ],
     "node/no-missing-import": "off",
+    "node/no-missing-require": [
+      "error",
+      {
+        "allowModules": [],
+        "resolvePaths": ["."],
+        "tryExtensions": [".js", ".ts", ".jsx", ".tsx", ".json", ".node"]
+      }
+    ],
     "prettier/prettier": "warn",
     "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
     "react/jsx-no-undef": "error",
-    "react/jsx-props-no-spreading": ["error", { "exceptions": ["Component"] }],
+    "react/jsx-props-no-spreading": ["error", { "exceptions": ["Threading"] }],
     "react-native/no-color-literals": 2,
     "react-native/no-inline-styles": 2,
     "react-native/no-raw-text": 2,

@@ -27,8 +27,8 @@
 
   "moduleDirectories": ["node_modules", "<rootDir>"],
   "moduleNameMapper": {
-    "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/utils/mocks.ts",
-    "\\.(css|less|scss)$": "<rootDir>/utils/mocks.ts"
+    "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/configs/mocks.ts",
+    "\\.(css|less|scss)$": "<rootDir>/configs/mocks.ts"
   },
 
   "notify": true,
@@ -41,7 +41,7 @@
   "roots": ["<rootDir>"],
 
   "setupFilesAfterEnv": ["@testing-library/jest-native/extend-expect"],
-  "setupFiles": ["<rootDir>/utils/jest.setup.ts"],
+  "setupFiles": ["<rootDir>/configs/jest.setup.ts"],
 
   "testLocationInResults": true,
   "testMatch": [

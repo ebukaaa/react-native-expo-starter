@@ -2,25 +2,35 @@
   "expo": {
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "backgroundColor": "#ffffff",
+        "foregroundImage": "./assets/images/adaptive-icon.png"
       }
     },
     "assetBundlePatterns": ["**/*"],
-    "description": "A starter project for React Native using Expo CLI",
-    "icon": "./assets/icon.png",
-    "ios": { "supportsTablet": true },
+    "description": "Starter project for React Native using Expo CLI",
+    "experiments": { "tsconfigPaths": true, "typedRoutes": true },
+    "icon": "./assets/images/icon.png",
+    "ios": {
+      "bundleIdentifier": "com.pascinso.expo-starter",
+      "supportsTablet": true
+    },
     "name": "expo-starter",
     "orientation": "portrait",
+    "plugins": ["expo-router"],
+    "scheme": "myapp",
     "slug": "expo-starter",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/images/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "updates": { "fallbackToCacheTimeout": 0 },
-    "userInterfaceStyle": "light",
-    "version": "1.0.0",
-    "web": { "favicon": "./assets/favicon.png" }
+    "userInterfaceStyle": "automatic",
+    "version": "3.0.0",
+    "web": {
+      "bundler": "metro",
+      "favicon": "./assets/images/favicon.png",
+      "output": "static"
+    }
   }
 }

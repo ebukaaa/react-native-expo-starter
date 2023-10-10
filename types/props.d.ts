@@ -1,7 +1,8 @@
-export interface Props {
-  styleName?: string | undefined;
-  className?: { [property: string]: string };
-}
+export interface Props
+  extends Partial<{
+    styleName: string | undefined;
+    className: Record<string, string>;
+  }> {}
 
 declare module "react-native" {
   interface ViewProps extends Props {}
