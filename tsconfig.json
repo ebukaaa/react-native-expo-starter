@@ -18,10 +18,11 @@
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "paths": { "@/*": ["./*"] },
     "removeComments": true,
     "strict": true
   },
-  "exclude": ["utils"],
+  "exclude": ["components/configs"],
   "extends": "expo/tsconfig.base",
-  "include": ["**/*.ts", "**/*.tsx"]
+  "include": ["**/*.ts", "**/*.tsx", ".expo/types/**/*.ts", "expo-env.d.ts"]
 }
