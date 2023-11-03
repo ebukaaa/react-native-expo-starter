@@ -2,7 +2,7 @@ import { Text, View, Link } from "components";
 import { defineProperties } from "utils";
 import { useLayoutEffect, useNavigation } from "hooks";
 
-const useMissing: import("./types").Missing = () => {
+const useMissing: import("types/app").Missing = () => {
   const { setOptions } = useNavigation<import("types").Stack>();
   const { styles } = useMissing;
 

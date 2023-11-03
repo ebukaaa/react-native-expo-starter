@@ -1,3 +1,5 @@
+export type * from "@pascinso/types";
+
 export type {
   FunctionComponent,
   RefObject,
@@ -27,4 +29,4 @@ export type {
 
 export type { Router } from "expo-router";
 
-export * from "./navigation";
+export type * from "./navigation";

@@ -1,11 +1,11 @@
 import { ScrollViewStyleReset } from "components";
-import "./styles.scss";
+import "styles/app.scss";
 
 // This file is web-only and used to configure the root HTML for every
 // web page during static rendering.
 // The contents of this function only run in Node.js environments and
 // do not have access to the DOM or browser APIs.
-export default function useHTML({ children }: import("./types").HTMLProps) {
+const useHTML: import("types/app").HTML = ({ children }) => {
   return (
     <html lang="en">
       <head>
@@ -30,4 +30,6 @@ export default function useHTML({ children }: import("./types").HTMLProps) {
       <body>{children}</body>
     </html>
   );
-}
+};
+
+export default useHTML;
