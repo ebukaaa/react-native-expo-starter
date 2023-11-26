@@ -1,8 +1,8 @@
-import { useLayoutEffect, useNavigation } from "hooks";
 import { View, Text } from "components";
+import { useLayoutEffect, useNavigation } from "hooks";
 
 export default function useAbout() {
-  const { setOptions } = useNavigation<import("types").Stack>();
+  const { setOptions } = useNavigation<Stack>();
 
   useLayoutEffect(() => {
     setOptions({ title: "About" });

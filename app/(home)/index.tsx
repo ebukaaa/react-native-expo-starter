@@ -1,11 +1,11 @@
-import { Text, View, Link } from "components";
 import { defineProperties } from "utils";
+import { Text, View, Link } from "components";
 import { useLayoutEffect, useNavigation } from "hooks";
 import { Google } from "icons";
 
-const useHome: import("./types").Home = () => {
+const useHome: Home = () => {
   const { styles } = useHome;
-  const { setOptions } = useNavigation<import("types").Stack>();
+  const { setOptions } = useNavigation<Stack>();
 
   useLayoutEffect(() => {
     setOptions({ title: "Home" });
@@ -30,7 +30,6 @@ const useHome: import("./types").Home = () => {
 defineProperties(useHome, {
   styles: {
     value: {
-      image: { width: 64, height: 64 },
       view: { alignItems: "center", flex: 1, justifyContent: "center" },
       title: { fontSize: 20, fontWeight: "bold" },
     },
