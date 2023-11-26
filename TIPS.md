@@ -26,6 +26,14 @@ npx expo install -- -save-dev @types/react-native
 
 ```
 
+4. Additional TypeScript configs
+
+```bash
+
+"paths": { "@/*": ["./*"] },
+
+```
+
 ## Links
 
 Find more icons on [@expo/vector-icons](https://icons.expo.fyi/Index)
