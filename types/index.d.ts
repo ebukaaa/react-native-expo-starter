@@ -1,11 +1,12 @@
 export type * from "@pascinso/types";
 
 export type {
-  FunctionComponent,
+  Dispatch,
   RefObject,
   ReactNode,
-  Dispatch,
+  ComponentProps,
   SetStateAction,
+  FunctionComponent,
 } from "react";
 
 export type { BottomTabNavigationOptions } from "@react-navigation/bottom-tabs";
@@ -25,8 +26,7 @@ export type {
   TextStyle,
   ViewStyle,
   ListRenderItem,
+  TransformsStyle,
 } from "react-native";
 
-export type { Router } from "expo-router";
-
-export type * from "./navigation";
+export type { Router, Link } from "expo-router";
