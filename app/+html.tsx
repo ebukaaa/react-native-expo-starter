@@ -5,7 +5,7 @@ import "styles/app.scss";
 // web page during static rendering.
 // The contents of this function only run in Node.js environments and
 // do not have access to the DOM or browser APIs.
-const useHTML: import("types/app").HTML = ({ children }) => {
+const useHTML: HTML = ({ children }) => {
   return (
     <html lang="en">
       <head>
