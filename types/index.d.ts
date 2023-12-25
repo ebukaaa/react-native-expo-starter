@@ -32,4 +32,4 @@ export type {
   TransformsStyle,
 } from "react-native";
 
-export type { Router, Link } from "expo-router";
+export type { Link } from "expo-router";
