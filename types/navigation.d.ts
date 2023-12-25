@@ -6,6 +6,8 @@ type RouteProp<T> = import("types").RouteProp<T, keyof T>;
 
 interface Route extends Readonly<RouteProp<StackParams>> {}
 
+interface Router extends Readonly<typeof import("expo-router").router> {}
+
 interface Stack
   extends Readonly<
     import("types").NavigationProp<
@@ -17,7 +19,7 @@ interface Stack
           index: number;
           routeNames: (keyof StackParams)[];
           history?: unknown[];
-          routes: RouteProp<StackParams>[];
+          routes: Route[];
           stale: false;
         }
       >,
