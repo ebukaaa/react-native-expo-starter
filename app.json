@@ -27,7 +27,7 @@
     },
     "updates": { "fallbackToCacheTimeout": 0 },
     "userInterfaceStyle": "automatic",
-    "version": "6.0.0",
+    "version": "1.0.0",
     "web": {
       "bundler": "metro",
       "favicon": "./assets/images/favicon.png",
