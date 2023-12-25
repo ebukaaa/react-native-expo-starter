@@ -4,14 +4,18 @@ export type {
   Dispatch,
   RefObject,
   ReactNode,
-  ComponentProps,
+  SVGAttributes,
+  CSSProperties,
   SetStateAction,
+  ComponentClass,
+  ComponentProps,
   FunctionComponent,
 } from "react";
 
-export type { BottomTabNavigationOptions } from "@react-navigation/bottom-tabs";
-
-export type { BottomTabBarProps } from "@react-navigation/bottom-tabs";
+export type {
+  BottomTabBarProps,
+  BottomTabNavigationOptions,
+} from "@react-navigation/bottom-tabs";
 
 export type {
   RouteProp,
@@ -25,7 +29,6 @@ export type {
   StyleProp,
   TextStyle,
   ViewStyle,
-  ListRenderItem,
   TransformsStyle,
 } from "react-native";
 
