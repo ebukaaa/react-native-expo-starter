@@ -1,15 +1,16 @@
-import { defineProperties } from "utils";
+import { defineProperties, load } from "utils";
 import { Text, View, Link } from "components";
 import { useLayoutEffect, useNavigation } from "hooks";
-import { Google } from "icons";
 
 const useHome: Home = () => {
-  const { styles } = useHome;
+  const { styles, eventListener = () => null, Google = () => null } = useHome;
   const { setOptions } = useNavigation<Stack>();
 
-  useLayoutEffect(() => {
-    setOptions({ title: "Home" });
-  }, [setOptions]);
+  defineProperties(useHome, {
+    setOptions: { get: () => setOptions, configurable: true },
+  });
+
+  useLayoutEffect(eventListener, [eventListener]);
 
   return (
     <View style={styles?.view}>
@@ -28,6 +29,13 @@ const useHome: Home = () => {
 };
 
 defineProperties(useHome, {
+  eventListener: {
+    value() {
+      const { setOptions = () => null } = useHome;
+      setOptions({ title: "Home" });
+    },
+  },
+  Google: { value: (props) => load(import("assets/svgs/google.svg"), props) },
   styles: {
     value: {
       view: { alignItems: "center", flex: 1, justifyContent: "center" },

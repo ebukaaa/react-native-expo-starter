@@ -1,5 +1,11 @@
 interface Home
   extends FunctionComponent,
     Partial<
-      Readonly<{ styles: { view: Style<ViewStyle>; title: Style<TextStyle> } }>
+      Readonly<
+        Pick<Stack, "setOptions"> & {
+          eventListener: () => void;
+          Google: typeof import("assets/svgs/google.svg").default;
+          styles: { view: Style<ViewStyle>; title: Style<TextStyle> };
+        }
+      >
     > {}

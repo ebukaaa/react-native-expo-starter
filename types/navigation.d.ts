@@ -1,6 +1,6 @@
 type Stacks = "(home)" | "about";
 
-interface StackParams extends Record<Stacks, undefined> {}
+interface StackParams extends Readonly<{ [stack in Stacks]: undefined }> {}
 
 type RouteProp<T> = import("types").RouteProp<T, keyof T>;
 
@@ -15,12 +15,12 @@ interface Stack
       keyof StackParams,
       undefined,
       Readonly<
-        Record<"key" | "type", string> & {
-          index: number;
-          routeNames: (keyof StackParams)[];
-          history?: unknown[];
-          routes: Route[];
+        { [prop in "key" | "type"]: string } & {
           stale: false;
+          index: number;
+          routes: Route[];
+          history?: unknown[];
+          routeNames: (keyof StackParams)[];
         }
       >,
       import("types").NativeStackNavigationOptions

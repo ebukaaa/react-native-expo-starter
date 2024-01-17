@@ -1,14 +1,16 @@
-import { Text, View, Link } from "components";
 import { defineProperties } from "utils";
+import { Text, View, Link } from "components";
 import { useLayoutEffect, useNavigation } from "hooks";
 
 const useMissing: Missing = () => {
+  const { styles, eventListener = () => null } = useMissing;
   const { setOptions } = useNavigation<Stack>();
-  const { styles } = useMissing;
 
-  useLayoutEffect(() => {
-    setOptions({ title: "Oops!" });
-  }, [setOptions]);
+  defineProperties(useMissing, {
+    setOptions: { get: () => setOptions, configurable: true },
+  });
+
+  useLayoutEffect(eventListener, [eventListener]);
 
   return (
     <View style={styles?.view}>
@@ -21,6 +23,12 @@ const useMissing: Missing = () => {
 };
 
 defineProperties(useMissing, {
+  eventListener: {
+    value() {
+      const { setOptions = () => null } = useMissing;
+      setOptions({ title: "Oops!" });
+    },
+  },
   styles: {
     value: {
       view: {

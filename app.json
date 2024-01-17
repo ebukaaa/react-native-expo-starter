@@ -9,6 +9,7 @@
     "assetBundlePatterns": ["**/*"],
     "description": "Starter project for React Native using Expo CLI",
     "experiments": { "tsconfigPaths": true, "typedRoutes": true },
+    "extra": { "router": { "origin": false } },
     "icon": "./assets/images/icon.png",
     "ios": {
       "bundleIdentifier": "com.pascinso.expo-starter",
@@ -21,9 +22,9 @@
     "scheme": "myapp",
     "slug": "expo-starter",
     "splash": {
+      "backgroundColor": "#ffffff",
       "image": "./assets/images/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "resizeMode": "contain"
     },
     "updates": { "fallbackToCacheTimeout": 0 },
     "userInterfaceStyle": "automatic",

@@ -1,5 +1,5 @@
 interface HTMLProps {
-  children: import("types").ReactNode;
+  children: ReactNode;
 }
 
 interface HTML extends FunctionComponent<HTMLProps> {}
@@ -7,10 +7,15 @@ interface HTML extends FunctionComponent<HTMLProps> {}
 interface Missing
   extends FunctionComponent,
     Partial<
-      Readonly<{
-        styles: Record<"title" | "linkText", Style<TextStyle>> & {
-          view: Style<ViewStyle>;
-          link: Style<RemoveProp<TextStyle, "textTransform">>;
-        };
-      }>
+      Readonly<
+        Pick<Stack, "setOptions"> & {
+          eventListener: () => void;
+          styles: { [textStyle in "title" | "linkText"]: Style<TextStyle> } & {
+            view: Style<ViewStyle>;
+            link: ComponentProps<typeof import("components").Link>["style"];
+          };
+        }
+      >
     > {}
+
+interface Layout extends FunctionComponent {}

@@ -1,12 +1,13 @@
 declare namespace NodeJS {
   interface ProcessEnv
-    extends Record<
-      | "apiKey"
-      | "authDomain"
-      | "projectId"
-      | "storageBucket"
-      | "messagingSenderId"
-      | "appId",
-      string
-    > {}
+    extends Readonly<{
+      // * Replace props
+      [prop in
+        | "apiKey"
+        | "authDomain"
+        | "projectId"
+        | "storageBucket"
+        | "messagingSenderId"
+        | "appId"]: string;
+    }> {}
 }
