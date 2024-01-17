@@ -1,7 +1,7 @@
 export interface Props
   extends Partial<{
     styleName: string | undefined;
-    className: Record<string, string>;
+    className: { [key: string]: string };
   }> {}
 
 declare module "react-native" {
