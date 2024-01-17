@@ -19,8 +19,8 @@ export type {
 
 export type {
   RouteProp,
-  TabNavigationState,
   NavigationProp,
+  TabNavigationState,
 } from "@react-navigation/native";
 
 export type { NativeStackNavigationOptions } from "@react-navigation/native-stack";
@@ -31,5 +31,3 @@ export type {
   ViewStyle,
   TransformsStyle,
 } from "react-native";
-
-export type { Link } from "expo-router";
