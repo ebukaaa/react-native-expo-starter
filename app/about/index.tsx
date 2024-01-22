@@ -1,16 +1,14 @@
-import { View, Text } from "components";
-import { useLayoutEffect, useNavigation } from "hooks";
+import { View, Text, Stack } from "components";
 
-export default function useAbout() {
-  const { setOptions } = useNavigation<Stack>();
-
-  useLayoutEffect(() => {
-    setOptions({ title: "About" });
-  }, [setOptions]);
-
+const useAbout = () => {
   return (
-    <View>
-      <Text>useAbout</Text>
-    </View>
+    <>
+      <Stack.Screen options={{ title: "About" }} />
+      <View>
+        <Text>useAbout</Text>
+      </View>
+    </>
   );
-}
+};
+
+export default useAbout;
