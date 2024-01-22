@@ -14,7 +14,7 @@ const useHome: Home = () => {
 
   return (
     <View style={styles?.view}>
-      <Link href="/about">
+      <Link href="/about/">
         <Text style={styles?.title}>Go to About Screen</Text>
       </Link>
       <Google width={64} height={64} />

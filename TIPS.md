@@ -23,14 +23,20 @@ const name: React.ComponentProps<typeof FontAwesome>["name"]
 ```bash
 
 npx expo install -- -save-dev @types/react-native
-
 ```
 
 4. Additional TypeScript configs
 
 ```bash
-
 "paths": { "@/*": ["./*"] },
+"paths": { "*": ["./*"] }, // catches ``baseUrl: "."`` rule
+```
+
+5. Create Expo app from templates
+
+```bash
+
+npx create-expo-app -t
 
 ```
 

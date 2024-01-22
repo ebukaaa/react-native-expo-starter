@@ -1,4 +1,4 @@
-import "react-native-gesture-handler";
+// import "react-native-gesture-handler";
 import { LogBox, Stack } from "components";
 
 LogBox.ignoreLogs(["Require cycle:"]);
