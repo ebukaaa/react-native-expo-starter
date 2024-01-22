@@ -3,7 +3,6 @@ module.exports = function useConfig(api) {
   return {
     presets: ["babel-preset-expo"],
     plugins: [
-      "expo-router/babel",
       [
         "module:react-native-dotenv",
         {
@@ -15,7 +14,6 @@ module.exports = function useConfig(api) {
           allowUndefined: true,
         },
       ],
-      "react-native-reanimated/plugin",
     ],
   };
 };
