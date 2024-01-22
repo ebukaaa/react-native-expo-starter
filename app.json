@@ -19,7 +19,7 @@
     "orientation": "portrait",
     "plugins": ["expo-router"],
     "runtimeVersion": { "policy": "appVersion" },
-    "scheme": "myapp",
+    "scheme": "expo_starter",
     "slug": "expo-starter",
     "splash": {
       "backgroundColor": "#ffffff",
