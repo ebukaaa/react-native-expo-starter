@@ -18,8 +18,9 @@
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "paths": { "*": ["./*"] },
     "removeComments": true,
-    "strict": true
+    "strict": true,
   },
   "exclude": ["configs"],
   "extends": "expo/tsconfig.base",
