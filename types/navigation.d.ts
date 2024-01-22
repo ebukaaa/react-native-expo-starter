@@ -6,7 +6,7 @@ type RouteProp<T> = import("types").RouteProp<T, keyof T>;
 
 interface Route extends Readonly<RouteProp<StackParams>> {}
 
-interface Router extends Readonly<typeof import("expo-router").router> {}
+interface Router extends Readonly<import("types").Router> {}
 
 interface Stack
   extends Readonly<

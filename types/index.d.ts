@@ -31,3 +31,5 @@ export type {
   ViewStyle,
   TransformsStyle,
 } from "react-native";
+
+export type { Router } from "expo-router";
