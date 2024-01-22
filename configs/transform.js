@@ -1,4 +1,4 @@
-const upstreamTransformer = require("metro-react-native-babel-transformer");
+const upstreamTransformer = require("@expo/metro-config/babel-transformer");
 const svg = require("react-native-svg-transformer");
 
 module.exports.transform = function transform({ src, filename, options }) {
