@@ -1,5 +1,4 @@
-export { Platform } from "react-native";
-
-export { defineProperties, load } from "@pascinso/utils";
-
+export * from "./mocks/@pascinso";
 export * from "./get-dimension";
+
+export { Platform } from "react-native";
