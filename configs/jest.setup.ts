@@ -1,6 +1,6 @@
 jest.mock("react-native/Libraries/Animated/NativeAnimatedHelper");
 jest.mock("*.svg", () => jest.fn());
-jest.mock("utils/@pascinso", () => ({
+jest.mock("utils/mocks/@pascinso", () => ({
   load: jest.fn(),
   defineProperties: jest.fn(),
 }));
