@@ -8,7 +8,7 @@
     "!**/babel.config.js",
     "!**/dist/**",
     "!**/metro.config.js",
-    "!**/mocks.ts",
+    "!**/configs/mocks.ts",
     "!**/node_modules/**",
     "!**/tests/**"
   ],
@@ -50,9 +50,9 @@
   ],
   "testPathIgnorePatterns": [
     "<rootDir>/babel.config.js",
+    "<rootDir>/configs/mocks.ts",
     "<rootDir>/dist",
     "<rootDir>/metro.config.js",
-    "<rootDir>/mocks.ts",
     "<rootDir>/node_modules",
     "<rootDir>/tests"
   ],
