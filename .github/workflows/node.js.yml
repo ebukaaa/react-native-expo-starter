@@ -24,7 +24,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npx ci
+    - run: npx ci jest jest-expo @testing-library/jest-native @testing-library/react-native
     - run: npm run build --if-present
     # - run: npm run eslint
     - run: npm test
