@@ -8,7 +8,6 @@ jest.mock("expo-router", () => ({
   Stack: { Screen: jest.fn() },
   Link: ({ children }) => children,
 }));
-
 jest.mock("expo-router/html", () => ({ ScrollViewStyleReset: jest.fn() }));
 jest.mock("hooks", () => ({
   useNavigation: () => ({ setOptions: jest.fn() }),

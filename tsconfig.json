@@ -19,7 +19,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "removeComments": true,
-    "strict": true,
+    "strict": true
   },
   "exclude": ["configs"],
   "extends": "expo/tsconfig.base",

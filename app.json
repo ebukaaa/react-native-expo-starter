@@ -6,15 +6,10 @@
         "foregroundImage": "./assets/images/adaptive-icon.png"
       }
     },
-    "assetBundlePatterns": ["**/*"],
     "description": "Starter project for React Native using Expo CLI",
     "experiments": { "tsconfigPaths": true, "typedRoutes": true },
-    "extra": { "router": { "origin": false } },
     "icon": "./assets/images/icon.png",
-    "ios": {
-      "bundleIdentifier": "com.pascinso.expo-starter",
-      "supportsTablet": true
-    },
+    "ios": { "supportsTablet": true },
     "name": "expo-starter",
     "orientation": "portrait",
     "plugins": ["expo-router"],
@@ -26,7 +21,6 @@
       "image": "./assets/images/splash.png",
       "resizeMode": "contain"
     },
-    "updates": { "fallbackToCacheTimeout": 0 },
     "userInterfaceStyle": "automatic",
     "version": "1.0.0",
     "web": {

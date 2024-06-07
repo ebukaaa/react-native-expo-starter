@@ -6,6 +6,7 @@ export type {
   ReactNode,
   SVGAttributes,
   CSSProperties,
+  ComponentType,
   SetStateAction,
   ComponentClass,
   ComponentProps,
