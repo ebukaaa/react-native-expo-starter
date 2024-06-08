@@ -108,5 +108,5 @@
     "test": "NODE_OPTIONS=--experimental-vm-modules jest",
     "update:dependency": "npm run npm:install"
   },
-  "version": "6.5.0"
+  "version": "6.6.0"
 }
