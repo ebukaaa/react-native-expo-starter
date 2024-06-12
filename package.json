@@ -104,9 +104,10 @@
     "preupdate:dependency": "npx npm-check-updates -u",
     "run:android:natively": "expo run:android",
     "reset:project": "node ./scripts/reset-project.js",
+    "run:ios:device": "expo run:ios --device",
     "run:ios:natively": "expo run:ios",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest",
     "update:dependency": "npm run npm:install"
   },
-  "version": "6.6.0"
+  "version": "6.6.1"
 }
